@@ -71,7 +71,7 @@ export default {
     let info = {};
     if (movieId) {
       switch (type) {
-        case "movei":
+        case "movie":
           info = await basicFecth(
             `/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`
           );
