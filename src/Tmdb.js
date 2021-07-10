@@ -1,5 +1,5 @@
-const API_KEY = "5f335b9bf9bf9948f11201782ea76a03";
-const API_BASE = "https://api.themoviedb.org/3";
+// const API_KEY = "5f335b9bf9bf9948f11201782ea76a03";
+// const API_BASE = "https://api.themoviedb.org/3";
 console.log(API_BASE);
 
 const basicFecth = async (endpoint) => {
@@ -12,8 +12,8 @@ export default {
       {
         slug: "originals",
         title: "Originais do Netflix",
-        items: await fetch(
-          `https://api.themoviedb.org/3/discover/tv/?with_network=213&language=pt-BR&api_key=${API_KEY}`
+        items: await basicFecth(
+          `/discover/tv/?with_network=213&language=pt-BR&api_key=${API_KEY}`
         ),
       },
       {
